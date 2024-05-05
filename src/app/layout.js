@@ -2,6 +2,7 @@ import { Inter, Archivo } from "next/font/google";
 import "./globals.scss";
 
 import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const archivo = Archivo({ subsets: ["latin"], variable: '--font-archivo' });
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} ${archivo.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

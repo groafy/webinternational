@@ -8,14 +8,14 @@ export default function StartPageHero() {
                 <p className='introText startPageHero__gridItemHeadingText'>
                     Elevate Your Digital Presence with Seamless Website Design: Where Functionality Reigns. Discover intuitive navigation, unmatched performance, and superior user experience. Join us in setting new standards for digital excellence. Let's build websites that drive results effortlessly.
                 </p>
-                <button className='btn startPageHero__gridItemHeadingButton'>Lets elevate your website</button>
+                <button className='btn btn--primary startPageHero__gridItemHeadingButton'>Lets elevate your website</button>
             </div>
             <div className='startPageHero__grid'>
                 <div className='startPageHero__gridItem startPageHero__gridItem--cta'>
                     <div className='startPageHero__gridItemHeadingContainer'>
                         <h1 className='d2 startPageHero__gridItemHeading'>Small team, <br /><span className='d1'>big results</span></h1>
                         <p className='introText startPageHero__gridItemHeadingText'>
-                            Elevate Your Digital Presence with Seamless Website Design: Where Functionality Reigns. Discover intuitive navigation, unmatched performance, and superior user experience. Join us in setting new standards for digital excellence. Let's build websites that drive results effortlessly.
+                            At Webnexa, we let our work speak for itself. Despite our streamlined team, we consistently achieve remarkable outcomes in web development. Our approach is straightforward: we prioritize quality, collaboration, and innovation above all else. By harnessing the collective talents of our team members, we deliver websites that stand out in a crowded digital landscape. With Webnexa, you can trust that our dedication and expertise will shine through in every project we undertake.
                         </p>
                     </div>
                     <a className='introText a startPageHero__gridItemHeadingLink'>
