@@ -3,6 +3,10 @@
 @import '../../assets/styles/variables.scss';
 
 .principles {
+    &__heading {
+        margin-bottom: 0;
+    }
+    
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -11,10 +15,10 @@
 
         &Item {
             @include setup-card;
-            background: $c-white;
+            background: $c-card-bg;
 
             &:nth-child(2) {
-                background: $c-primary-gradient;
+                background: $c-secondary-gradient;
             }
         }
     }

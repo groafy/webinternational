@@ -47,4 +47,15 @@
             color: $c-black;
         }
     }
+
+    &--primary {
+        background: $c-primary;
+        color: $c-white;
+        box-shadow: $bs-card;
+        border-color: $c-primary;
+
+        &:hover {
+            background: $c-primary-hover;
+        }
+    }
 }

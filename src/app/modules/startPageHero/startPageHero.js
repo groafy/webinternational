@@ -4,7 +4,7 @@ export default function StartPageHero() {
     return (
         <section className='startPageHero__base'>
             <div className='startPageHero__headingContainer'>
-                <h1 className='d2 startPageHero__gridItemHeading'>Websites that just <br /><span className='d1 text--primary'>WORK</span></h1>
+                <h1 className='d1 startPageHero__gridItemHeading'>Websites that just <br /><span className='text--primary'>WORK</span></h1>
                 <p className='introText startPageHero__gridItemHeadingText'>
                     Elevate Your Digital Presence with Seamless Website Design: Where Functionality Reigns. Discover intuitive navigation, unmatched performance, and superior user experience. Join us in setting new standards for digital excellence. Let's build websites that drive results effortlessly.
                 </p>
@@ -13,7 +13,7 @@ export default function StartPageHero() {
             <div className='startPageHero__grid'>
                 <div className='startPageHero__gridItem startPageHero__gridItem--cta'>
                     <div className='startPageHero__gridItemHeadingContainer'>
-                        <h1 className='d2 startPageHero__gridItemHeading'>Websites that just <span className='d1 text--primary'>WORK</span></h1>
+                        <h1 className='d2 startPageHero__gridItemHeading'>Small team, <br /><span className='d1'>big results</span></h1>
                         <p className='introText startPageHero__gridItemHeadingText'>
                             Elevate Your Digital Presence with Seamless Website Design: Where Functionality Reigns. Discover intuitive navigation, unmatched performance, and superior user experience. Join us in setting new standards for digital excellence. Let's build websites that drive results effortlessly.
                         </p>
@@ -39,7 +39,7 @@ export default function StartPageHero() {
                         </span>
                     </div>
                     <a className='introText a a--white startPageHero__gridItemHeadingLink'>
-                        <span>Learn more about our philosophy</span>
+                        <span>Learn more about our values</span>
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#FFFF" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M6.13 4.27 9.87 8l-3.74 3.73"/></svg>
                     </a>
                 </div>

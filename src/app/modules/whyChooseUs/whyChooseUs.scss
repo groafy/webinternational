@@ -3,6 +3,10 @@
 @import '../../assets/styles/variables.scss';
 
 .whyChooseUs {
+    &__heading {
+        margin-bottom: 0;
+    }
+    
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -15,10 +19,11 @@
 
         &Item {
             @include setup-card;
-            background: $c-white;
+            background: $c-card-bg;
 
             &:nth-child(1) {
                 grid-area: large1;
+                background: $c-primary-gradient;
             }
 
             &:nth-child(2) {
