@@ -1,0 +1,21 @@
+@import './assets/styles/typography.scss';
+@import './assets/styles/breakpoints.scss';
+@import './assets/styles/variables.scss';
+@import './assets/styles/layout.scss';
+@import './assets/styles/button.scss';
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
+    background: $c-black;
+    color: $c-primary-text;
+}

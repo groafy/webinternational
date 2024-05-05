@@ -1,0 +1,169 @@
+@import '../../assets/styles/breakpoints.scss';
+@import '../../assets/styles/utils.scss';
+@import '../../assets/styles/variables.scss';
+
+.startPageHero {
+    &__base {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__heading {
+        &Container {
+            @include fluid('padding-left', 320px, 1440px, 16px, 160px);
+            @include fluid('padding-right', 320px, 1440px, 16px, 160px);
+
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 96px;
+        }
+
+        &Text {
+            margin-bottom: 0;
+        }
+
+        &Button {
+            margin-top: 24px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 32px;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'cta cta image';
+
+        &Item {
+            @include setup-card;
+
+            min-height: 600px;
+
+            &--cta {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                grid-area: cta;
+                background: $c-card-bg;
+            }
+
+            &--image {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 8px;
+                grid-area: image;
+                overflow: hidden;
+                background: $c-primary-gradient;
+            }
+
+            &ImageContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 8px;
+            }
+
+            &ChangingText {
+                transition-duration: $d-short;
+                position: relative;
+                padding-right: 16px;
+
+                &Inner {
+                    z-index: 100;
+                }
+
+                a {
+                    justify-self: flex-end;
+                    align-self: flex-end;
+                }
+            }
+
+            &Heading {
+                margin-bottom: 0;
+
+                &Container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                }
+
+                &Link {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+
+    &__linksGrid {
+        display: grid;
+        gap: 32px;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        &Item {
+            @include setup-card;
+
+            min-height: 200px;
+            background: $c-secondary-gradient;
+            color: $c-white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+
+            &Cta {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 8px;
+
+                &Title {
+                    margin-bottom: 0;
+                    color: $c-white;
+                }
+
+                &Text {
+                    margin-bottom: 0;
+                    color: $c-white;
+                }
+
+                &Btn {
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+
+            svg {
+                align-self: flex-start;
+                justify-self: flex-start;
+                position: absolute;
+                top: 32px;
+                left: 32px;
+            }
+
+            &Title {
+                text-align: center;
+                margin-bottom: 0;
+                color: $c-white;
+            }
+        }
+    }
+}
+
+@keyframes slide-out-right {
+    0% {
+        left: 0;
+    }
+    99% {
+        left: 100vw;
+    }
+    100% {
+        opacity: 0;
+    }
+}

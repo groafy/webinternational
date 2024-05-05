@@ -1,0 +1,133 @@
+@import '../../assets/styles/breakpoints.scss';
+@import '../../assets/styles/utils.scss';
+@import '../../assets/styles/variables.scss';
+
+.header {
+    &__base {
+        @include fluid('padding-left', 320px, 1440px, 16px, 24px);
+        @include fluid('padding-right', 320px, 1440px, 16px, 24px);
+
+        position: sticky;
+        z-index: 1001;
+        top: 8px;
+        left: 0;
+
+        &--unscrolled {
+            background: $c-black;
+        }
+    }
+
+    &__wrapper {
+        padding: 12px 0;
+        max-width: $page-max-width-header;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        border-radius: 16px;
+        transition-duration: $d-short;
+        border: 1px solid transparent;
+
+        &--scrolled {
+            padding: 12px 24px;
+            background: $c-card-bg;
+            box-shadow: $bs-card;
+            border-color: $c-border-bg;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 0 !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: -3px !important;
+    }
+
+    &__ctaButton {
+        display: none !important;
+
+        @include xl {
+            display: flex !important;
+        }
+    }
+
+    &__menuBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 8px;
+        outline: none;
+        background: transparent;
+        border: none;
+
+        @include xl {
+            display: none;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $c-black;
+            outline-offset: 2px;
+        }
+    }
+
+    &__nav {
+        display: none;
+        align-items: center;
+        gap: 16px;
+
+        @include xl {
+            display: flex;
+        }
+
+        &Item {
+            font-size: 16px;
+            font-weight: $f-weight-regular;
+            line-height: 150%;
+            letter-spacing: 0.32px;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: text-decoration-color $d-extrashort;
+            text-underline-offset: 4px;
+            color: $c-black;
+            border-radius: 8px;
+            padding: 2px 4px;
+
+            &:hover {
+                text-decoration-color: $c-black;
+            }
+
+            &:focus-visible {
+                outline: 1px solid $c-black;
+                outline-offset: 6px;
+            }
+        }
+    }
+
+    &__quickLinks {
+        &Container {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        &ContactContainer {
+            display: none;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 0px;
+
+            @include xl {
+                display: flex;
+            }
+
+            &Item {
+                font-size: 16px;
+                font-weight: $f-weight-medium;
+                line-height: 150%;
+            }
+        }
+    }
+}

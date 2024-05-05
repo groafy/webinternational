@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+$page-max-width-bg: 1140px;
+$page-max-width: 1440px;
+$page-max-width-header: 1440px;
+
+$f-weight-light: 300;
+$f-weight-regular: 400;
+$f-weight-medium: 500;
+$f-weight-thick: 600;
+$f-weight-bold: 700;
+$f-weight-black-font: 900;
+
+$d-extrashort: 0.1s;
+$d-short: 0.3s;
+$d-medium: 0.6s;
+$d-long: 0.9s;
+$d-extralong: 1.8s;
+$d-animationDelay: 0.15s;
+
+$b-sm: 576px;
+$b-md: 768px;
+$b-lg: 992px;
+$b-xl: 1200px;
+$b-2xl: 1400px;
+
+
+$bs-card: 0 4px 9px 0 rgb(0 0 0 / 12%);
+
+$c-primary-heading-text: #FFFF;
+$c-black: #000000;
+$c-primary: #b16cff;
+$c-primary-gradient: linear-gradient(90deg, #1f9985c0 0%, #4828bd93 100%), url(https://grainy-gradients.vercel.app/noise.svg);
+$c-secondary-gradient: radial-gradient(ellipse at top, #b15eff5d, #9320ffe3), url(https://grainy-gradients.vercel.app/noise.svg);
+$c-slate-primary: #F3F3F3;
+$c-white: #FFFF;
+$c-white-08: rgba(255, 255, 255, 0.8);
+$c-yellow-slate: #E6DAC0;
+$c-yellow-slate-08: rgb(230, 218, 192, 0.8);
+$c-card-bg: #1a1a1a;
+$c-border-bg: rgba(255, 255, 255, .1);
+$c-primary-text: rgba(255, 255, 255, 0.7);

@@ -1,0 +1,50 @@
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 16px;
+    outline-color: transparent;
+    border: 2px solid $c-white;
+    background: $c-white;
+    color: $c-black;
+    cursor: pointer;
+    font-weight: $f-weight-bold;
+    text-decoration: none;
+    transition: background $d-short, box-shadow $d-extrashort;
+    font-size: 16px;
+    justify-content: center;
+    line-height: 150%;
+
+    &:hover {
+        background: $c-primary;
+        color: $c-white;
+        box-shadow: $bs-card;
+        border-color: $c-primary;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $c-primary;
+        outline-offset: 2px;
+        border-color: $c-primary;
+        background: $c-primary;
+        color: $c-white;
+    }
+
+    &--secondary {
+        background: $c-black;
+        color: $c-white;
+        border-color: $c-black;
+
+        &:hover {
+            background: $c-white;
+            color: $c-black;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $c-black;
+            outline-offset: 2px;
+            background: $c-white;
+            color: $c-black;
+        }
+    }
+}
