@@ -9,17 +9,45 @@
     
     &__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         gap: 32px;
+
+        @include lg {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        @include xl {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            'large1 large1'
+            'small1 small2';
+        }
 
         &Item {
             @include setup-card;
             text-align: center;
             background: $c-card-bg;
 
+            &:nth-child(1) {
+                @include xl {
+                    grid-area: small1;
+                }
+            }
+
             &:nth-child(2) {
                 background: $c-secondary-gradient;
+                @include xl {
+                    grid-area: large1;
+                }
+            }
+
+            &:nth-child(3) {
+                @include xl {
+                    grid-area: small2;
+                }
             }
         }
     }

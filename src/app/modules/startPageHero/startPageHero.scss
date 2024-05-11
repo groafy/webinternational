@@ -35,9 +35,18 @@
         display: grid;
         gap: 32px;
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas: 
-        'cta cta image';
+        'cta'
+        'cta'
+        'image';
+
+        @include lg {
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            'cta cta image';
+        }
 
         &Item {
             @include setup-card;
@@ -103,8 +112,18 @@
     &__linksGrid {
         display: grid;
         gap: 32px;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+
+        @include md {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include xl {
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
 
         &Item {
             @include setup-card;

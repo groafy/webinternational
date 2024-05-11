@@ -5,11 +5,12 @@
 .howItWorks {
     &__grid {
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
         'big1 big1 small1'
-        'small2 big2 big2';
+        'big1 big1 small2'
+        'big1 big1 small3';
         gap: 32px;
 
         &Item {
@@ -30,7 +31,7 @@
             }
 
             &:nth-child(4) {
-                grid-area: big2;
+                grid-area: small3;
             }
         }
     }
