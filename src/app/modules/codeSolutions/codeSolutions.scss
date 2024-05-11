@@ -1,0 +1,38 @@
+@import '../../assets/styles/breakpoints.scss';
+@import '../../assets/styles/utils.scss';
+@import '../../assets/styles/variables.scss';
+
+.codeSolutions {
+    &__grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'big1 big1 small1 small2'
+        'big1 big1 small1 small2'
+        'big1 big1 medium1 medium1';
+        gap: 32px;
+
+        &Item {
+            @include setup-card;
+            background: $c-card-bg;
+
+            &:nth-child(1) {
+                grid-area: big1;
+                background: $c-primary-gradient;
+            }
+
+            &:nth-child(2) {
+                grid-area: small1;
+            }
+
+            &:nth-child(3) {
+                grid-area: small2;
+            }
+
+            &:nth-child(4) {
+                grid-area: medium1;
+            }
+        }
+    }
+}

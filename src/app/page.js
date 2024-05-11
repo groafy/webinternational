@@ -2,6 +2,8 @@ import StartPageHero from "./modules/startPageHero/startPageHero";
 import WhyChooseUs from "./modules/whyChooseUs/whyChooseUs";
 import Principles from "./modules/principles/principles";
 import TargetAudience from "./modules/targetAudience/targetAudience";
+import HowItWorks from "./modules/howItWorks/howItWorks";
+import CodeSolutions from "./modules/codeSolutions/codeSolutions";
 
 export default function Home() {
   return (
@@ -28,7 +30,12 @@ export default function Home() {
       </div>
       <div className="componentMargin__top--xl componentMargin__bottom--xl">
         <div className="container">
-          <h1 className="d1">Programming solutions</h1>
+          <HowItWorks />
+        </div>
+      </div>
+      <div className="componentMargin__top--xl componentMargin__bottom--xl">
+        <div className="container">
+          <CodeSolutions />
         </div>
       </div>
       <div className="componentMargin__top--xl componentMargin__bottom--xl">

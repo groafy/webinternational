@@ -15,6 +15,7 @@
 
         &Item {
             @include setup-card;
+            text-align: center;
             background: $c-card-bg;
 
             &:nth-child(2) {
