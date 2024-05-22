@@ -1,0 +1,217 @@
+@import '../../assets/styles/breakpoints.scss';
+@import '../../assets/styles/utils.scss';
+@import '../../assets/styles/variables.scss';
+
+.whyItsImportant {
+    &__base {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    &__title {
+        &Container {
+            text-align: center;
+            max-width: 75%
+        }
+
+        &Subtext {
+            text-align: left;
+        }
+    }
+
+    &__container {
+        @include setup-card;
+
+        width: 100%;
+        background: $c-card-bg;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+
+    &__toggle {
+        &Container {
+            padding: 8px;
+            border-radius: 16px;
+            background: $c-white-01;
+            gap: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        &Button {
+            padding: 6px 24px;
+            font-size: 16px;
+            font-weight: $f-weight-bold;
+            color: $c-white;
+            outline: none;
+            border: 1px solid $c-white-03;
+            cursor: pointer;
+            transition: background $d-short;
+            border-radius: 12px;
+
+            &:nth-child(1) {
+                background: $c-primary;
+            }
+
+            &:nth-child(2) {
+                background: $c-white-03;
+            }
+
+            &:hover {
+                background: $c-white-05;
+            }
+        }
+    }
+
+    &__example {
+        &Container {
+            @include setup-card;
+            padding: 0;
+            overflow: hidden;
+            background: #202020;
+            border: 1px solid #555557;
+            width: 100%;
+            position: relative;
+        }
+
+        &Browser {
+            &NavBar {
+                background: #3D3E40;
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 8px;
+                border-bottom: 1px solid #555557;
+                width: 100%;
+
+                &Item {
+                    padding: 8px;
+                    border-radius: 50%;
+
+                    &:nth-child(1) {
+                        background: #ED655A;
+                    }
+
+                    &:nth-child(2) {
+                        background: #E1C04C;
+                    }
+
+                    &:nth-child(3) {
+                        background: #72BE47;
+                    }
+                }
+            }
+
+            &Inner {
+                display: flex;
+                flex-direction: column;
+                min-height: 800px;
+                max-height: 800px;
+                overflow-y: auto;
+            }
+        }
+
+        &Header {
+            position: sticky;
+
+            &Meta {
+                background: rgb(184, 95, 95);
+                padding: 4px 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            &Main {
+                background: rgb(60, 72, 73);
+                display: flex;
+                justify-content: space-between;
+                gap: 32px;
+                padding: 4px 8px;
+            }
+
+            &Logo {
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: -1px;
+            }
+
+            &Links {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                &Item {
+                    color: rgb(120, 120, 219);
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &MainContent {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 16px;
+            height: 100%;
+            grid-template-areas:
+            'sideMenu mainContent mainContent mainContent';
+        }
+
+        &SideMenu {
+            background: rgb(92, 92, 92);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: sideMenu;
+            gap: 8px;
+            padding: 24px;
+        }
+
+        &Content {
+            &Banner {
+                padding: 48px;
+                background: rgb(255, 255, 103);
+                border-radius: 24px;
+                margin: 32px 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $c-black;
+                font-size: 24px;
+            }
+            &Container {
+                display: flex;
+                flex-direction: column;
+                grid-area: mainContent;
+            }
+
+            &Heading {
+                font-size: 40px;
+            }
+
+            &SubHeading {
+                font-size: 40px;
+            }
+
+            &Image {
+                width: 50%;
+                background: rgb(142, 252, 252);
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $c-black;
+                font-size: 24px;
+                margin: 48px 0;
+            }
+        }
+    }
+}

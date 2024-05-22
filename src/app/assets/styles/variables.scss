@@ -35,7 +35,9 @@ $c-primary-gradient: linear-gradient(90deg, #1f9985c0 0%, #4828bd93 100%), url(h
 $c-secondary-gradient: radial-gradient(ellipse at top, #b15eff5d, #9320ffe3), url(https://grainy-gradients.vercel.app/noise.svg);
 $c-slate-primary: #F3F3F3;
 $c-white: #FFFF;
-$c-white-08: rgba(255, 255, 255, 0.8);
+$c-white-05: rgba(255, 255, 255, 0.5);
+$c-white-03: rgba(255, 255, 255, 0.3);
+$c-white-01: rgba(255, 255, 255, 0.1);
 $c-yellow-slate: #E6DAC0;
 $c-yellow-slate-08: rgb(230, 218, 192, 0.8);
 $c-card-bg: #1a1a1a;
