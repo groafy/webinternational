@@ -50,20 +50,152 @@
             outline: none;
             border: 1px solid $c-white-03;
             cursor: pointer;
+            background: $c-white-01;
             transition: background $d-short;
             border-radius: 12px;
 
-            &:nth-child(1) {
+            &--selected {
                 background: $c-primary;
-            }
-
-            &:nth-child(2) {
-                background: $c-white-03;
             }
 
             &:hover {
                 background: $c-white-05;
             }
+        }
+    }
+
+    &__goodExample {
+        &Header {
+            position: sticky;
+
+            &Meta {
+                background: rgb(182, 245, 203);
+                padding: 4px 16px;
+                display: flex;
+                color: $c-black;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 16px;
+
+                &Item {
+                    font-size: 16px;
+                    font-weight: $f-weight-medium;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline
+                    }
+                }
+            }
+
+            &Main {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 32px;
+                padding: 8px 16px;
+                background: rgb(60, 72, 73);
+            }
+
+            &Logo {
+                font-size: 28px;
+                font-weight: $f-weight-bold;
+                letter-spacing: -0.48px;
+                color: $c-white;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            &Links {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                &Item {
+                    color: $c-white;
+                    font-size: 16px;
+                    font-weight: $f-weight-medium;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline
+                    }
+                }
+            }
+        }
+
+        &CTAButton {
+            padding: 12px 24px;
+            border-radius: 14px;
+            background: rgb(217, 182, 245);
+            color: $c-black;
+            font-weight: $f-weight-bold;
+            font-size: 16px;
+            outline: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        &Inner {
+            padding: 48px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .whyItsImportant__exampleContentBanner {
+                margin: 96px 0;
+                width: 75%;
+            }
+        }
+
+        &SubContent {
+            width: 75%;
+        }
+
+        &Hero {
+            width: 75%;
+            display: flex;
+            align-items: flex-end;
+            gap: 48px;
+
+            .whyItsImportant__exampleContentImage {
+                margin: 0;
+                min-height: 500px;
+            }
+
+            .whyItsImportant__goodExampleCTAButton  {
+                margin-top: 32px;
+            }
+
+            &Left {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 50%;
+            }
+        }
+
+        &Title {
+            color: $c-white;
+            font-weight: $f-weight-bold;
+            font-size: 48px;
+            letter-spacing: -0.48px;
+            line-height: 150%;
+        }
+
+        &Subtitle {
+            font-size: 24px;
+            letter-spacing: -0.24px;
+            line-height: 150%;
+            font-weight: $f-weight-medium;
+        }
+
+        &Text {
+            font-size: 16px;
+            font-weight: $f-weight-regular;
+            line-height: 150%;
+            margin-bottom: 0;
         }
     }
 
@@ -195,10 +327,24 @@
 
             &Heading {
                 font-size: 40px;
+                line-height: 100%;
+                margin-bottom: 12px;
+            }
+
+            &CtaLink {
+                color: rgb(120, 120, 219);
+                text-decoration: underline;
             }
 
             &SubHeading {
                 font-size: 40px;
+                line-height: 100%;
+                margin-bottom: 12px;
+            }
+
+            &Text {
+                line-height: 100%;
+                margin-bottom: 12px;
             }
 
             &Image {
