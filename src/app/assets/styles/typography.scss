@@ -214,3 +214,20 @@ small,
         color: $c-white;
     }
 }
+
+.textcontentshadow {
+    position: relative;
+
+    &::before {
+        content: attr(data-title);
+        position: absolute;
+        top: -5px;
+        left: -100%;
+        font-size: 210px;
+        line-height: 80px;
+        letter-spacing: .02em;
+        color: rgba(255, 255, 255, 0.035);
+        white-space: nowrap;
+        z-index: -1;
+    }
+}

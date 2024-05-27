@@ -29,9 +29,10 @@ $bs-card: 0 4px 9px 0 rgb(0 0 0 / 12%);
 
 $c-primary-heading-text: #FFFF;
 $c-black: #000000;
-$c-primary: #b16cff;
-$c-primary-hover: #7e4ab9;
-$c-primary-gradient: linear-gradient(90deg, #1f9985c0 0%, #4828bd93 100%), url(https://grainy-gradients.vercel.app/noise.svg);
+$c-primary: #BB86FC;
+$c-primary-hover: #a273db;
+$c-primary-active: #cba0ff;
+$c-primary-gradient: linear-gradient(90deg, #BB86FC 0%, #2869bd93 100%), url(https://grainy-gradients.vercel.app/noise.svg);
 $c-secondary-gradient: radial-gradient(ellipse at top, #b15eff5d, #9320ffe3), url(https://grainy-gradients.vercel.app/noise.svg);
 $c-slate-primary: #F3F3F3;
 $c-white: #FFFF;

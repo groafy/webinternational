@@ -65,6 +65,8 @@
     }
 
     &__goodExample {
+        animation: fade-in $d-short forwards;
+        
         &Header {
             position: sticky;
 
@@ -200,6 +202,8 @@
     }
 
     &__example {
+        animation: fade-in $d-short forwards;
+
         &Container {
             @include setup-card;
             padding: 0;
@@ -359,5 +363,15 @@
                 margin: 48px 0;
             }
         }
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0.33;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

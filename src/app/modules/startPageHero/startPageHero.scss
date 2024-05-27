@@ -9,17 +9,43 @@
         gap: 32px;
     }
 
+    // &__blob {
+    //     position: absolute;
+    //     width: 10vw;
+    //     z-index: -1;
+    //     margin: 0 auto;
+    //     height: 10vh;
+    //     background: linear-gradient(64deg, #f34867 23%, #f24769 23%, #9d00ec 80%);
+    //     box-shadow: 0px 0px 200px 5px #5e3553;
+
+    //     border-radius: 28% 72% 22% 78% / 39% 23% 77% 61%; 
+    //     transform: rotate(0deg); 
+    //     will-change: border-radius, transform;
+        
+    //     animation: blob 10s linear infinite;
+    // }
+
     &__heading {
         &Container {
+            position: relative;
+
+            @include fluid('padding-top', 320px, 1440px, 40px, 80px);
+            @include fluid('padding-bottom', 320px, 1440px, 40px, 80px);
             @include fluid('padding-left', 320px, 1440px, 16px, 160px);
             @include fluid('padding-right', 320px, 1440px, 16px, 160px);
 
+            animation: open-up $d-extralong forwards;
             text-align: center;
+            position: relative;
             display: flex;
             justify-content: center;
             flex-direction: column;
             gap: 24px;
-            margin-bottom: 96px;
+            margin-bottom: 240px;
+
+            background: transparent;
+            background-image: radial-gradient($c-white-03 1px, transparent 0);
+            background-size: 40px 40px;
         }
 
         &Text {
@@ -31,158 +57,143 @@
         }
     }
 
-    &__grid {
-        display: grid;
-        gap: 32px;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        'cta'
-        'cta'
-        'image';
+    &__options {
+        &SubText {
+            width: 75%;
+        }
+        &Heading {
+            width: 75%;
+            text-align: center;
+            font-size: $f-weight-light;
 
-        @include lg {
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas: 
-            'cta cta image';
+            &Container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
         }
 
-        &Item {
-            @include setup-card;
+        &Grid {
+            display: grid;
+            gap: 32px;
+            grid-template-columns: 1fr;
+            margin-top: 160px;
 
-            min-height: 600px;
-
-            &--cta {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                grid-area: cta;
-                background: $c-card-bg;
+            &Container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
             }
 
-            &--image {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                gap: 8px;
-                grid-area: image;
-                overflow: hidden;
-                background: $c-primary-gradient;
-            }
+            &Item {
+                @include setup-card;
 
-            &ImageContainer {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                gap: 8px;
-            }
-
-            &ChangingText {
-                transition-duration: $d-short;
                 position: relative;
-                padding-right: 16px;
-
-                &Inner {
-                    z-index: 100;
-                }
-
-                a {
-                    justify-self: flex-end;
-                    align-self: flex-end;
-                }
-            }
-
-            &Heading {
-                margin-bottom: 0;
-
-                &Container {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 32px;
-                }
-
-                &Link {
-                    align-self: flex-end;
-                }
-            }
-        }
-    }
-
-    &__linksGrid {
-        display: grid;
-        gap: 32px;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
-
-        @include md {
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        @include xl {
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-
-        &Item {
-            @include setup-card;
-
-            min-height: 200px;
-            background: $c-secondary-gradient;
-            color: $c-white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-
-            &Cta {
+                background: $c-card-bg;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                gap: 8px;
+                gap: 32px;
+                align-items: center;
 
-                &Title {
-                    margin-bottom: 0;
-                    color: $c-white;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    inset: 0;
+                    background-image: $c-primary-gradient;
+                    opacity: 0;
+                    border-radius: 32px;
+                    transition: opacity $d-short linear;
                 }
 
-                &Text {
-                    margin-bottom: 0;
-                    color: $c-white;
+                svg {
+                    width: 200px;
+                    height: 200px;
+                    transition-duration: $d-short;
                 }
 
-                &Btn {
-                    text-align: center;
-                    justify-content: center;
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                    }
+                    svg {
+                        transform: scale(1.2);
+                    }
                 }
-            }
 
-            svg {
-                align-self: flex-start;
-                justify-self: flex-start;
-                position: absolute;
-                top: 32px;
-                left: 32px;
-            }
+                // &:nth-child(1),
+                // &:nth-child(3) {
+                //     transform: translateY(-80px);
+                // }
 
-            &Title {
-                text-align: center;
-                margin-bottom: 0;
-                color: $c-white;
+                &CtaButton {
+                    z-index: 10;
+                }
             }
         }
     }
 }
 
-@keyframes slide-out-right {
-    0% {
-        left: 0;
+@keyframes shift-up {
+    from {
+        transform: translateY(0);
     }
-    99% {
-        left: 100vw;
+
+    to {
+        transform: translateY(-80px);
+    }
+}
+
+@keyframes shift-down {
+    from {
+        transform: translateY(-80px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes open-up {
+    0% {
+        border-radius: 50%;
+    }
+
+    100% {
+        border-radius: 0%;
+    }
+}
+
+@keyframes blob {
+    0%, 100% {
+        border-radius: 28% 72% 22% 78% / 39% 23% 77% 61%; 
+    }
+    50% {
+        border-radius: 72% 28% 50% 50% / 55% 26% 74% 45%;  
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);  
     }
     100% {
-        opacity: 0;
+        transform: rotate(359deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .startPageHero__optionsGrid {
+        &:nth-child(1) {
+            animation: shift-up linear both;
+            animation-timeline: view();
+            animation-range: 25vh 75vh;
+        }
+
+        &:nth-child(2) {
+            animation: shift-down linear both;
+            animation-timeline: view();
+            animation-range: 25vh 75vh;
+        }
     }
 }

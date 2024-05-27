@@ -3,36 +3,88 @@
 @import '../../assets/styles/variables.scss';
 
 .codeSolutions {
+    &__base {
+        display: flex;
+        align-items: flex-start;
+        gap: 64px;
+    }
     &__grid {
+        &Container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 32px;
+        }
+
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        'big1 big1 small1 small2'
-        'big1 big1 small1 small2'
-        'big1 big1 medium1 medium1';
+        grid-template-rows: repeat(1fr);
+        grid-template-columns: 1fr;
         gap: 32px;
+        margin: 0;
+        padding: 0;
 
         &Item {
             @include setup-card;
-            background: $c-card-bg;
+            background: $c-primary-gradient;
+            list-style: none;
 
-            &:nth-child(1) {
-                grid-area: big1;
-                background: $c-primary-gradient;
+            svg {
+                width: 100px;
+                height: 100px;
             }
+        }
+    }
 
-            &:nth-child(2) {
-                grid-area: small1;
-            }
+    &__text {
+        &Container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
 
-            &:nth-child(3) {
-                grid-area: small2;
-            }
+        &Title {
+            margin: 0;
+        }
 
-            &:nth-child(4) {
-                grid-area: medium1;
-            }
+        &CtaLink {
+            margin-top: 24px;
+        }
+    }
+}
+
+@keyframes shift-up {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-80px);
+    }
+}
+
+@keyframes shift-down {
+    from {
+        transform: translateY(-80px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .codeSolutions__grid {
+        &:nth-child(1),
+        &:nth-child(3) {
+            animation: shift-up linear both;
+            animation-timeline: view();
+            animation-range: 25vh 75vh;
+        }
+
+        &:nth-child(2) {
+            animation: shift-down linear both;
+            animation-timeline: view();
+            animation-range: 25vh 75vh;
         }
     }
 }

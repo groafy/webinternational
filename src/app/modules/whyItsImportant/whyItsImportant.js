@@ -8,7 +8,10 @@ export default function WhyItsImportant() {
     return (
         <section className="whyItsImportant__base">
             <div className='whyItsImportant__titleContainer'>
-                <h1 className="h1 whyItsImportant__titleText">Importance of a <br /><span className="text--primary d1">Great design</span></h1>
+                <h1 className="h1 whyItsImportant__titleText">Importance of a 
+                    <br />
+                    <span className="text--primary d1 textcontentshadow" data-title="Great design">Great design</span>
+                </h1>
                 <p className='introText whyItsImportant__titleSubtext'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae? Rem provident ab, architecto nihil, suscipit accusantium reiciendis dolor maiores tempora laborum aspernatur earum cumque nisi culpa, laboriosam fugit quibusdam?</p>
             </div>
             <div className='whyItsImportant__container'>

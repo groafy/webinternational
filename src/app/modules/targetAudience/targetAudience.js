@@ -1,6 +1,7 @@
 "use client"
 import './targetAudience.scss'
-import { InView } from "react-intersection-observer"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 export default function TargetAudience(){
     const items = [
@@ -11,20 +12,25 @@ export default function TargetAudience(){
     ]
     return (
         <section className="targetAudience__base">
-            <h1 className="d1">Who&apos;s it <span className="text--primary">for</span> ?</h1>
-            <ul className='targetAudience__grid'>
-                {items.map((item, index) => (
-                    <InView triggerOnce threshold={1} key={index}>
-                        {({ inView, ref }) => (
-                        <li className={inView ? 'targetAudience__gridItem targetAudience__gridItem--scrolled' : 'targetAudience__gridItem'} ref={ref}>
-                            <h3 className='h2 targetAudience__gridItemTitle'>
-                                {item}
-                            </h3>
-                        </li>
-                        )}
-                    </InView>
-                ))}
-            </ul>
+            <h1 className="h1">
+                Solutions for <br />
+                <span className="d1 text--primary textcontentshadow" data-title="everyone">everyone</span>
+            </h1>
+            <Swiper
+                spaceBetween={32}
+                slidesPerView={3}
+                autoplay
+            >
+                {
+                    items.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="targetAudience__slide">
+                                <h2 className="h2">{item}</h2>
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
         </section>
     )
 }
