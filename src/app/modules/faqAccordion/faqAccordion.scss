@@ -1,0 +1,58 @@
+@import '../../assets/styles/breakpoints.scss';
+@import '../../assets/styles/utils.scss';
+@import '../../assets/styles/variables.scss';
+
+.faqAccordion {
+    &__base {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &Item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &Button {
+                @include setup-card;
+                text-align: left;
+                background: $c-card-bg;
+                color: $c-white;
+                border-color: transparent;
+                padding: 24px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                .faqAccordion__accordionItemButtonIcon--open {
+                    display: none;
+                }
+
+                &[aria-expanded="true"] {
+                    .faqAccordion__accordionItemButtonIcon--closed {
+                        display: none;
+                    }
+
+                    .faqAccordion__accordionItemButtonIcon--open {
+                        display: block;
+                    }
+                }
+            }
+
+            &Title {
+                margin: 0;
+            }
+
+            &Panel {
+                padding: 24px 48px;
+            }
+        }
+    }
+}

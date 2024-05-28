@@ -3,50 +3,85 @@
 @import '../../assets/styles/variables.scss';
 
 .whyChooseUs {
-    &__heading {
-        margin-bottom: 0;
+    &__base {
+        background: $c-primary-gradient;
+        padding: 240px 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            background: $c-black;
+            padding: 24px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            border-radius: 0 0 48px 48px;
+        }
+
+        &::after {
+            content: "";
+            background: $c-black;
+            padding: 24px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            border-radius: 48px 48px 0 0;
+        }
     }
-    
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        'large1'
-        'large2'
-        'small1'
-        'small2';
-        gap: 32px;
 
-        @include lg {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas: 
-            'large1 small1'
-            'large1 large2'
-            'small2 large2';
-        }
+    &__container {
+        display: flex;
+        gap: 120px;
+    }
 
-        &Item {
-            @include setup-card;
-            background: $c-card-bg;
+    &__textContainer {
+        width: 50%;
+        color: $c-white;
+    }
 
-            &:nth-child(1) {
-                grid-area: large1;
-                background: $c-primary-gradient;
-            }
+    &__logoContainer {
+        width: 50%;
+    }
 
-            &:nth-child(2) {
-                grid-area: small1;
-            }
+    &__logo {
+        width: 100%;
+        height: 100%;
+        transform: rotate(-20deg);
+    }
+}
 
-            &:nth-child(3) {
-                grid-area: large2;
-            }
+@keyframes shift-up {
+    from {
+        transform: translateY(0);
+    }
 
-            &:nth-child(4) {
-                grid-area: small2;
-            }
-        }
+    to {
+        transform: translateY(-160px);
+    }
+}
+
+@keyframes shift-down {
+    from {
+        transform: translateY(-160px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .whyChooseUs__textContainer {
+        animation: shift-down linear both;
+        animation-timeline: view();
+        animation-range: 15vh 85vh;
+    }
+
+    .whyChooseUs__logoContainer {
+        animation: shift-up linear both;
+        animation-timeline: view();
+        animation-range: 15vh 85vh;
     }
 }

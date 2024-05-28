@@ -230,4 +230,30 @@ small,
         white-space: nowrap;
         z-index: -1;
     }
+
+    &--primary {
+        &::before {
+            color: rgba(255, 255, 255, 0.535);
+        }
+    }
+}
+
+@keyframes shift-side {
+    from {
+        transform: translateX(-80px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .textcontentshadow {
+        &::before {
+            animation: shift-side linear both;
+            animation-timeline: view();
+            animation-range: 25vh 75vh;
+        }
+    }
 }

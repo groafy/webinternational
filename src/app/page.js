@@ -7,6 +7,8 @@ import CodeSolutions from "./modules/codeSolutions/codeSolutions";
 import WhyItsImportant from "./modules/whyItsImportant/whyItsImportant";
 import StyleSwitcher from "./modules/styleSwitcher/styleSwitcher";
 import SeoImportance from "./modules/seoImportance/seoImportance";
+import FaqAccordion from "./modules/faqAccordion/faqAccordion";
+import ContactForm from "./modules/contactForm/contactForm";
 
 export default function Home() {
   return (
@@ -42,18 +44,16 @@ export default function Home() {
         </div>
       </div>
       <div className="componentMargin__top--2xl componentMargin__bottom--2xl">
+        <WhyChooseUs />
+      </div>
+      <div className="componentMargin__top--2xl componentMargin__bottom--2xl">
         <div className="container">
-          The right pick
+          <FaqAccordion />
         </div>
       </div>
       <div className="componentMargin__top--2xl componentMargin__bottom--2xl">
         <div className="container">
-          faq
-        </div>
-      </div>
-      <div className="componentMargin__top--2xl componentMargin__bottom--2xl">
-        <div className="container">
-          contact form
+          <ContactForm />
         </div>
       </div>
       {/* <div className="componentMargin__top--2xl componentMargin__bottom--2xl">
