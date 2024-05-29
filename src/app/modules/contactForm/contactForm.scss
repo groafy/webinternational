@@ -20,21 +20,25 @@
 
         background: $c-card-bg;
         width: 100%;
-        display: flex;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'teaser form form';
         min-height: 500px;
     }
 
     &__teaserContainer {
         padding-right: 32px;
-        width: 40%;
+        width: 100%;
         border-right: 1px solid $c-border-bg;
         height: 100%;
+        grid-area: teaser;
     }
 
     &__formContainer {
         padding-left: 32px;
-        width: 60%;
+        width: 100%;
+        grid-area: form;
     }
 
     &__form {
@@ -46,20 +50,27 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            width: 100%;
+
+            textarea {
+                min-height: 300px;
+            }
         }
 
         &Label {
             font-size: 16px;
             font-weight: $f-weight-light;
             line-height: 150%;
+            width: 100%;
         }
 
         &Input {
             border-radius: 8px;
-            padding: 8px 16px;
+            padding: 16px 24px;
             border: 1px solid $c-border-bg;
-            background: transparent;
+            background: $c-input-bg;
             caret-color: $c-white;
+            width: 100%;
         }
     }
 }

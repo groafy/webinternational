@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
                     <p className='introText'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quidem ex cupiditate porro atque eaque, cum facere optio totam pariatur vero fuga! Atque nostrum iure dignissimos corrupti cupiditate est? Suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quidem ex cupiditate porro atque eaque, cum facere optio totam pariatur vero fuga! Atque nostrum iure dignissimos corrupti cupiditate est? Suscipit.
                     </p>
-                    <button className='btn btn--primary'>Book a free consultation</button>
+                    <button className='btn btn--secondary'>Book a free consultation</button>
                 </div>
                 <div className='whyChooseUs__logoContainer'>
                     <img src="/mainlogo.svg" className='whyChooseUs__logo' />
