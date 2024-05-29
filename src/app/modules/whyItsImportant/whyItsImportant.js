@@ -8,13 +8,13 @@ export default function WhyItsImportant() {
     return (
         <section className="whyItsImportant__base">
             <div className='whyItsImportant__titleContainer'>
-                <h1 className="h1 whyItsImportant__titleText">Importance of a 
+                <h1 className="h1 whyItsImportant__titleText animate" data-animate-key="text-stagger" data-animate-delay="0">Importance of a 
                     <br />
-                    <span className="text--primary d1 textcontentshadow" data-title="Great design">Great design</span>
+                    <span className="text--primary d1 textcontentshadow animate" data-title="Great design" data-animate-key="text-stagger" data-animate-delay="0.1">Great design</span>
                 </h1>
-                <p className='introText whyItsImportant__titleSubtext'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae? Rem provident ab, architecto nihil, suscipit accusantium reiciendis dolor maiores tempora laborum aspernatur earum cumque nisi culpa, laboriosam fugit quibusdam?</p>
+                <p className='introText whyItsImportant__titleSubtext animate' data-animate-key="text-stagger" data-animate-delay="0.2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae? Rem provident ab, architecto nihil, suscipit accusantium reiciendis dolor maiores tempora laborum aspernatur earum cumque nisi culpa, laboriosam fugit quibusdam?</p>
             </div>
-            <div className='whyItsImportant__container'>
+            <div className='whyItsImportant__container animate' data-animate-key="panel-out">
                 <div className='whyItsImportant__toggleContainer'>
                     <button 
                         className={!isGood ? 'whyItsImportant__toggleButton whyItsImportant__toggleButton--selected' : 'whyItsImportant__toggleButton'} 

@@ -33,11 +33,14 @@ export default function CodeSolutions() {
                 </ul>
             </div>
             <div className='codeSolutions__textContainer'>
-                <h1 className='codeSolutions__textTitle d2'>Programming <span className='text--primary textcontentshadow' data-title="solutions">solutions</span></h1>
-                <p className='introText'>
+                <h1 className='codeSolutions__textTitle h1 animate' data-animate-key="text-stagger" data-animate-delay="0">
+                    Programming <br />
+                    <span className='text--primary textcontentshadow d1 animate' data-title="solutions" data-animate-key="text-stagger" data-animate-delay="0.1">solutions</span>
+                </h1>
+                <p className='introText animate' data-animate-key="text-stagger" data-animate-delay="0.2">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, perspiciatis. Numquam omnis, eveniet earum cupiditate voluptatem autem quo ea odit consequuntur quibusdam veritatis placeat. Animi quo dignissimos dolor necessitatibus exercitationem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, perspiciatis. Numquam omnis, eveniet earum cupiditate voluptatem autem quo ea odit consequuntur quibusdam veritatis placeat. Animi quo dignissimos dolor necessitatibus exercitationem.
                 </p>
-                <button className='codeSolutions__textCtaLink btn btn--primary'>Contact us</button>
+                <button className='codeSolutions__textCtaLink btn btn--primary animate' data-animate-key="text-stagger" data-animate-delay="0.3">Contact us</button>
             </div>
         </section>
     )

@@ -17,9 +17,9 @@ export default function TargetAudience(){
     ]
     return (
         <section className="targetAudience__base">
-            <h1 className="h1">
+            <h1 className="h1 animate" data-animate-key="text-stagger" data-animate-delay="0">
                 Solutions for <br />
-                <span className="d1 text--primary textcontentshadow" data-title="everyone">everyone</span>
+                <span className="d1 text--primary textcontentshadow animate" data-title="everyone" data-animate-key="text-stagger" data-animate-delay="0.1">everyone</span>
             </h1>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectCards]}
@@ -29,6 +29,8 @@ export default function TargetAudience(){
                 slidesPerView={'auto'}
                 navigation
                 pagination={{ clickable: true }}
+                className='animate'
+                data-animate-key="text-stagger" data-animate-delay="0.1"
             >
                 {
                     items.map((item, index) => (

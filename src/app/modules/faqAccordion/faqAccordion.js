@@ -43,14 +43,14 @@ export default function FaqAccordion() {
 
     return (
         <section className='faqAccordion__base'>
-            <h1 className='h1'>
+            <h1 className='h1 animate' data-animate-key="text-stagger" data-animate-delay="0">
                 When you succeed <br />
-                <span className='text--primary d1 textcontentshadow' data-title="We succeed">We succeed</span>
+                <span className='text--primary d1 textcontentshadow animate' data-title="We succeed" data-animate-key="text-stagger" data-animate-delay="0.1">We succeed</span>
             </h1>
             <div className='faqAccordion__accordion'>
                 {accordionItems.map((item, index) => {
                     return (
-                        <div key={index} className='faqAccordion__accordionItem'>
+                        <div key={index} className='faqAccordion__accordionItem animate' data-animate-key="text-stagger" data-animate-delay={index * 0.1}>
                             <button 
                                 aria-controls={`panel${index + 1}`}
                                 aria-expanded='false'

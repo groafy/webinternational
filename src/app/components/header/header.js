@@ -1,11 +1,20 @@
 "use client"
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useGSAP } from "@gsap/react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import './header.scss';
 
+gsap.registerPlugin(useGSAP,ScrollToPlugin);
+
 export default function Header() {
     const [scrolled, setScrolled] = useState(false)
-    const pathname = usePathname()
+    const pathname = usePathname();
+
+    const goToContact = () => {
+        gsap.to(window, { duration: 2, scrollTo: "#contact-form" });
+    }
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -37,28 +46,8 @@ export default function Header() {
                     <span>WEBNEXA</span>
                 </span>
                 <div className='header__quickLinksContainer'>
-                    <button className='btn btn--primary header__ctaButton'>Contact Us</button>
-                    <button className="header__menuBtn">
-                        <svg aria-hidden="true" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="30" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M432 176H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 272H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 368H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16z"></path></svg>
-                    </button>
+                    <button className='btn btn--primary header__ctaButton' onClick={() => goToContact()}>Contact Us</button>
                 </div>
-                {/* <nav className='header__nav'>
-                    <a href="#" className='header__navItem'>Dveře</a>
-                    <a href="#" className='header__navItem'>Okna</a>
-                    <a href="#" className='header__navItem'>Interiéry</a>
-                    <a href="#" className='header__navItem'>O nás</a>
-                    <a href="#" className='header__navItem'>Dveře</a>
-                </nav>
-                <div className='header__quickLinksContainer'>
-                    <div className='header__quickLinksContactContainer'>
-                        <span className='header__quickLinksContactContainerItem'>(+420) 601 187 121</span>
-                        <span className='header__quickLinksContactContainerItem'>dverezlin@email.cz</span>
-                    </div>
-                    <button className='btn header__ctaButton'>Vytvořit poptávku</button>
-                    <button className="header__menuBtn">
-                        <svg aria-hidden="true" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="30" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M432 176H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 272H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 368H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16z"></path></svg>
-                    </button>
-                </div> */}
             </div>
         </header>
     )

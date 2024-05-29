@@ -3,6 +3,7 @@ import "./globals.scss";
 
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
+import AnimationWrapper from "./components/animationWrapper/animationWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 const archivo = Archivo({ subsets: ["latin"], variable: '--font-archivo' });
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} ${archivo.variable}`}>
         <Header />
-        {children}
+          <AnimationWrapper>
+            {children}
+          </AnimationWrapper>
         <Footer />
       </body>
     </html>
