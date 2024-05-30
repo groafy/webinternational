@@ -10,7 +10,7 @@ import ContactForm from "./modules/contactForm/contactForm";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflowxHidden">
       <div className="componentMargin__top--none componentMargin__bottom--2xl">
         <div className="container">
           <StartPageHero />

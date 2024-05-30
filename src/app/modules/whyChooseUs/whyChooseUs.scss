@@ -34,15 +34,28 @@
     &__container {
         display: flex;
         gap: 120px;
+        flex-direction: column;
+
+        @include lg {
+            flex-direction: row;
+        }
     }
 
     &__textContainer {
-        width: 50%;
+        width: 100%;
         color: $c-white;
+
+        @include lg {
+            width: 50%;
+        }
     }
 
     &__logoContainer {
-        width: 50%;
+        width: 100%;
+
+        @include lg {
+            width: 50%;
+        }
     }
 
     &__logo {

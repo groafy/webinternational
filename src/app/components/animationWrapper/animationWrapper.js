@@ -53,7 +53,7 @@ export default function AnimationWrapper({children}) {
     }, []);
 
     return (
-        <main>
+        <main className="overflowxHidden">
             {children}
         </main>
     )

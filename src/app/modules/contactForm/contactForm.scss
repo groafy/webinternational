@@ -21,24 +21,37 @@
         background: $c-card-bg;
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas: 
-        'teaser form form';
+        'form'
+        'teaser';
         min-height: 500px;
+
+        @include lg {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            'teaser form form';
+        }
     }
 
     &__teaserContainer {
-        padding-right: 32px;
         width: 100%;
         border-right: 1px solid $c-border-bg;
         height: 100%;
         grid-area: teaser;
+
+        @include lg {
+            padding-right: 32px;
+        }
     }
 
     &__formContainer {
-        padding-left: 32px;
         width: 100%;
         grid-area: form;
+
+        @include lg {
+            padding-left: 32px;
+        }
     }
 
     &__form {

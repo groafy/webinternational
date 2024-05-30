@@ -12,8 +12,17 @@
 
     &__heading {
         &Container {
-            width: 75%;
+            @include fluid('padding-left', 320px, 1440px, 1px, 160px);
+            @include fluid('padding-right', 320px, 1440px, 1px, 160px);
+            
             text-align: center;
+            width: 100%;
+
+            @include lg {
+                width: 75%;
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
 
@@ -33,23 +42,34 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 84px;
+            gap: 48px;
             padding: 24px 0;
+
+            @include lg {
+                gap: 84px;
+            }
         }
 
         &Item {
             color: #118316;
             background: $c-green-gradient;
             border: 3px solid #05CC63;
-            padding: 48px;
+            padding: 32px;
             border-radius: 50%;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: $f-weight-bold;
-            width: 50px;
-            height: 50px;
+            width: 24px;
+            height: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include lg {
+                padding: 48px;
+                width: 50px;
+                height: 50px;
+                font-size: 32px;
+            }
 
             &:nth-child(2) {
                 transform: scale(2) translateY(-20px);
@@ -58,7 +78,14 @@
         }
 
         &Text {
-            width: 75%;
+            @include fluid('padding-left', 320px, 1440px, 16px, 64px);
+            @include fluid('padding-right', 320px, 1440px, 16px, 64px);
+
+            @include lg {
+                width: 75%;
+                padding-right: 0;
+                padding-left: 0;
+            }
         }
     }
 }
